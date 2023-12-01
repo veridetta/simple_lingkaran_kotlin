@@ -11,7 +11,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val nimToMatch = "8020200128" // NIM yang benar
+        supportActionBar?.show()
+        supportActionBar?.title = "Activity 1"
+        val nimToMatch = "8020200128"
 
         val editTextNIM = findViewById<EditText>(R.id.editTextNIM)
         val buttonLogin = findViewById<Button>(R.id.buttonLogin)
@@ -20,12 +22,10 @@ class MainActivity : AppCompatActivity() {
             val inputNIM = editTextNIM.text.toString()
 
             if (inputNIM == nimToMatch) {
-                // Jika NIM cocok, arahkan ke HomeActivity
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
-                finish() // Selesaikan aktivitas login agar tidak dapat kembali dengan tombol back
+                finish()
             } else {
-                // Jika NIM tidak cocok, tampilkan pesan toast
                 Toast.makeText(this, "Login salah", Toast.LENGTH_SHORT).show()
             }
         }

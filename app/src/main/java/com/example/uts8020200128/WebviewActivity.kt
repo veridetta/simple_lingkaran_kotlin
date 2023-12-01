@@ -10,7 +10,8 @@ class WebviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview)
-
+        supportActionBar?.show()
+        supportActionBar?.title = "Activity 4"
         var url = "https://google.com"
         var webview = findViewById<WebView>(R.id.webview)
         webview.webViewClient = WebViewClient()

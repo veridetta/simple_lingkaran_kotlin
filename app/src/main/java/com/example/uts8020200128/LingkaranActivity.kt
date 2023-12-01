@@ -14,6 +14,8 @@ class LingkaranActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lingkaran)
+        supportActionBar?.show()
+        supportActionBar?.title = "Activity 3"
         buttonCalculate = findViewById(R.id.buttonCalculate)
         editTextRadius = findViewById(R.id.editTextRadius)
         textViewResult  = findViewById(R.id.textViewResult)

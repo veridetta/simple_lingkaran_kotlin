@@ -9,6 +9,9 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        supportActionBar?.show()
+        supportActionBar?.title = "Activity 2"
+
         val buttonLuasLingkaran = findViewById<Button>(R.id.buttonLuasLingkaran)
         val buttonWebView = findViewById<Button>(R.id.buttonWebView)
 
